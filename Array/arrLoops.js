@@ -1,6 +1,5 @@
 // For loop
 // Write a program to calculate the sum of all numbers in an array.
-
 let nums = [1,2,3,4,5];
 let sum = 0;
 
@@ -9,8 +8,8 @@ for(let i=0; i<nums.length; i++){
 };
 // console.log(sum);
 
-// Find the maximum number in an array
 
+// Find the maximum number in an array
 let nums2 = [4,7,1,8,0,1,5,9];
 let max = nums2[0];
 
@@ -22,6 +21,14 @@ for(let i=1; i<nums2.length; i++){
 // console.log(`Maximum number is: ${max}`);
 
 
+// Reverse an array
+let nums3 = [1,2,3,4,5];
+let reverse = [];
+
+for(let i=nums3.length-1; i>=0; i--){
+    reverse.push(nums3[i]);
+}
+// console.log(`Reversed array is: ${reverse}`);
 
 
 
@@ -32,7 +39,6 @@ for(let i=1; i<nums2.length; i++){
 
 // While loop
 // Same as above but using a while loop
-
 let whileNums = [2,5,8,1,9];
 let sum1 = 0;
 let i = 0;
@@ -54,5 +60,14 @@ while (j < whileNums2.length) {
     }
     j++;
 }
-console.log(`Maximum number is: ${max1}`);
+// console.log(`Maximum number is: ${max1}`);
 
+let whileNums3 = [6,7,8,9,10,11];
+let reverse1 = [];
+let k = whileNums3.length - 1;
+
+while (k >= 0) {
+    reverse1.push(whileNums3[k]);
+    k--;
+}
+console.log(`Reversed array is: ${reverse1}`);
