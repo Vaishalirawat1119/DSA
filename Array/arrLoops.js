@@ -31,8 +31,20 @@ for(let i=nums3.length-1; i>=0; i--){
 // console.log(`Reversed array is: ${reverse}`);
 
 
+// Count Even and Odd numbers in an array
+let nums4 = [1,2,4,7,8,11,56,33,72,23,55,9,5];
+let evenCount = 0;
+let oddCount = 0;
 
-
+for(let i=0; i<nums4.length; i++){
+    if(nums4[i] % 2 === 0){
+        evenCount++;
+    }
+    else{
+        oddCount++;
+    }
+}
+// console.log(`Even numbers: ${evenCount}, Odd numbers: ${oddCount}`);
 
 
 
@@ -70,4 +82,23 @@ while (k >= 0) {
     reverse1.push(whileNums3[k]);
     k--;
 }
-console.log(`Reversed array is: ${reverse1}`);
+// console.log(`Reversed array is: ${reverse1}`);
+
+
+let whileNums4 = [1,2,3,4,34,77,5,6,12,92,11,7,19,8,9,10];
+let evenCount1 = 0;
+let oddCount1 = 0;
+let a = 0;
+
+while (a<whileNums4.length) {
+    if(whileNums4[a] % 2 === 0){
+        evenCount1++;
+    }
+    else{
+        oddCount1++;
+    }
+    a++;
+}
+
+console.log(`Even numbers: ${evenCount1}, Odd numbers: ${oddCount1}`);
+
