@@ -1,7 +1,7 @@
 // Write a program that returns the largest number in an array
 
 function largestNum(arr){
-    let max_num = -1;
+    let max_num = -Infinity;
     for(let i=0; i<arr.length; i++){
         if(arr[i] > max_num){
             max_num = arr[i];
@@ -12,4 +12,5 @@ function largestNum(arr){
 
 let arr = [2,45,12,96,8,3,70];
 let arr2 = [-2, 0, -5];
-console.log(largestNum(arr))
+let arr3 = [-50,-99,-11]
+console.log(largestNum(arr3))
