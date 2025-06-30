@@ -9,9 +9,9 @@ function searchElement(arr, element){
     return -1
 }
 
-let arr = [3,5,1,6,9];
+let arr = [3,5,1,6,9]; 
 console.log(searchElement(arr,10));
 console.log(searchElement(arr,6));
 console.log(searchElement(arr,2));
-console.log(searchElement(arr,1));
+console.log(searchElement(arr,1)); 
 console.log(searchElement(arr,3));
