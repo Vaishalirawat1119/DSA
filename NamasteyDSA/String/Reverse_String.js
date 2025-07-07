@@ -1,6 +1,6 @@
 function reverseString(str){
     let strlen = str.length;
-    let halfLen = strlen/2;
+    let halfLen = Math.floor(strlen/2);
 
     for(let i=0; i<halfLen; i++){
         let temp = str[i];
