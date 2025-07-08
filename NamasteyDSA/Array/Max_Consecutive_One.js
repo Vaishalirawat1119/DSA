@@ -11,7 +11,7 @@ function maxOne(a){
             currCount = 0;
         }
     }
-    return maxCountOne;
+    return Math.max(currCount,maxCountOne);
 }
 let a = [1,1,1,0,0,0,1,1,0,0,0];
 console.log(maxOne(a));
