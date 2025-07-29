@@ -4,6 +4,9 @@ function Node(val){
 }
 
 function rotate(head, k){
+    //corner cases
+    if(!head || !head.next) return head;
+
     //calculate length
     let length = 0;
     let curr = head;
