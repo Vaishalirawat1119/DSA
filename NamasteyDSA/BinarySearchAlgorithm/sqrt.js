@@ -4,7 +4,8 @@ function sqrt(x){
     let r = Math.floor(x/2);
 
     while(l <= r){
-        let m = Math.floor((l+r)/2);
+        // let m = Math.floor((l+r)/2);
+        let m = l + Math.floor((r-l)/2);  //best practice to find middle value. This will never overflow
         if(x === m**2) return m;
         if(x < m**2){
             r = m-1;
