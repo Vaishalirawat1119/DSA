@@ -1,4 +1,6 @@
-function guess(n, pick){
+function guess(n){
+    let pick = Math.floor(Math.random() * n) + 1; 
+
     let l = 1;
     let r = n;
     while(l <= r){
@@ -16,4 +18,4 @@ function guess(n, pick){
     return -1;
 }
 let n = 20;
-console.log(guess(n, 23));
+console.log(guess(n));
