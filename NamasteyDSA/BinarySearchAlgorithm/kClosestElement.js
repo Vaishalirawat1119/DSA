@@ -10,7 +10,14 @@ function closestElement(arr, k, x){
             r = m;
         }
     }
-    return arr.slice(l, l+k);
+
+    let ans = [];
+    for(let i=l; i<l+k; i++){
+        ans.push(arr[i])
+    }
+
+    return ans;
+    // return arr.slice(l, l+k);
 }
 let arr = [1,1,2,3,4,5];
 console.log(closestElement(arr, 4, -1));
