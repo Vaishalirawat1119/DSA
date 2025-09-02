@@ -1,4 +1,6 @@
 function firstOccurrrence(haystack, needle){
+
+    //using sliding window method -----------------------
     let n = haystack.length;
     let m = needle.length;
 
@@ -14,8 +16,14 @@ function firstOccurrrence(haystack, needle){
         }
     }
     return -1;
+
+    
+
+    // using built-in method-------------------------
+
+    // return haystack.indexOf(needle);
 }
 
-// let haystack = "sadbutsad";
-let haystack = "saturdaysad"
+let haystack = "sadbutsad";
+// let haystack = "saturdaysad"
 console.log(firstOccurrrence(haystack, "sad"));
