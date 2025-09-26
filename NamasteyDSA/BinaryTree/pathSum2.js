@@ -6,12 +6,8 @@ function TreeNode(val, left=null, right=null){
 
 function pathSum(root, target){
     if(!root) return false;
-    if(!root.left && !root.right){
-        return root.val === target;
-    }
-    let leftSubTreeHasPathSum = pathSum(root.left, target - root.val);
-    let rightSubTreeHasPathSum = pathSum(root.right, target - root.val);
-    return leftSubTreeHasPathSum || rightSubTreeHasPathSum;
+    if(!root.left && !root.right) return root.val === target;
+    return pathSum(root.left, target - root.val) || pathSum(root.right, target - root.val);;
 }
 
 // let root = new TreeNode(5,
