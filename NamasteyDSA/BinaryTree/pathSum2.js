@@ -4,6 +4,8 @@ function TreeNode(val, left=null, right=null){
     this.right = right;
 }
 
+// Bottom Up Approach
+
 function pathSum(root, target){
     if(!root) return false;
     if(!root.left && !root.right) return root.val === target;

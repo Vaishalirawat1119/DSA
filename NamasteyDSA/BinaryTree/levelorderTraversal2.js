@@ -4,6 +4,8 @@ function TreeNode(val, left=null, right=null){
     this.right = right;
 }
 
+//using recursion
+
 function levelOrderTraversal(root){
     if(!root) return [];
     let ans = [];

@@ -4,6 +4,8 @@ function TreeNode(val, left=null, right=null){
     this.right = right;
 }
 
+//recursion approach
+
 function symmetricTree(root){
     let isMirror = (left, right) => {
         if(!left && !right) return true;
