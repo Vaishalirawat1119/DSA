@@ -4,17 +4,26 @@ function TreeNode(val, left=null, right=null){
     this.right = right;
 }
 
-function validBST(root){
-    let ans = null;
-    let isBST = (curr, lo, hi) => {
-        if(!curr) return true;
-        if((lo !== null && curr.val <= lo) || (hi !== null && curr.val >= hi)) return false;
-        let isLeftBST = isBST(curr.left, lo, curr.val);
-        let isRightBST = isBST(curr.right, curr.val, hi);
-        return isLeftBST && isRightBST;
-    }
-    ans = isBST(root, null, null);
-    return ans;
+function validBST(curr, lo=null, hi=null){
+    // let ans = null;
+
+    if(!curr) return true;
+    if((lo !== null && curr.val <= lo) || (hi !== null && curr.val >= hi)) return false;
+    let isLeftBST = validBST(curr.left, lo, curr.val);
+    let isRightBST = validBST(curr.right, curr.val, hi);
+    return isLeftBST && isRightBST;
+
+    // let isBST = (curr, lo, hi) => {
+    //     if(!curr) return true;
+    //     if((lo !== null && curr.val <= lo) || (hi !== null && curr.val >= hi)) return false;
+    //     let isLeftBST = isBST(curr.left, lo, curr.val);
+    //     let isRightBST = isBST(curr.right, curr.val, hi);
+    //     return isLeftBST && isRightBST;
+    // }
+    // ans = isBST(root, null, null);
+    // return ans;
+
+    // return isBST(root, null, null);
 }
 
 let root = new TreeNode(50,
