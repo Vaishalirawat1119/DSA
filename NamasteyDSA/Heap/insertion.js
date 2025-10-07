@@ -2,7 +2,8 @@
 
 class MinHeap{
     constructor(){
-        this.heap = [5, 10, 20, 30];
+        // this.heap = [5, 10, 20, 30];
+        this.heap = []
     }
 
     getLeftChildIndex(i){
@@ -40,7 +41,12 @@ class MinHeap{
 let heap = new MinHeap();
 console.log(heap);
 
+heap.insert(20);
+heap.insert(50);
+heap.insert(10);
 heap.insert(1);
 heap.insert(4);
+heap.insert(7);
+heap.insert(40);
 
 console.log(heap);
