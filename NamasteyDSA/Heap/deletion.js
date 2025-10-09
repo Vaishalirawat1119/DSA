@@ -15,6 +15,7 @@ class MinHeap{
         return Math.floor((i-1)/2);
     }
 
+    //insertion
     insert(val){
         this.heap.push(val);
         let lastIndex = this.heap.length-1;
@@ -34,6 +35,7 @@ class MinHeap{
         }
     }
     
+    //deletion
     extract(){
         if(this.heap.length < 1) return null;
         let min = this.heap[0];
@@ -60,6 +62,12 @@ class MinHeap{
             this.heapifyDown(smallest);
         }
     }
+
+    //peek the element
+    peek(){
+        if(!this.heap.length) return null;
+        return this.heap[0];
+    }
 }
 
 let heap = new MinHeap();
@@ -76,5 +84,8 @@ console.log("--------------------");
 console.log("Extracted Elements: ");
 console.log(heap.extract());
 console.log(heap.extract());
+console.log("--------------------");
+console.log("peek");
+console.log(heap.peek());
 console.log("--------------------");
 console.log(heap);
