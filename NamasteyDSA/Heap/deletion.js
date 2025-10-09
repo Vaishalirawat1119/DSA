@@ -73,19 +73,25 @@ class MinHeap{
 let heap = new MinHeap();
 console.log(heap);
 console.log("--------------------");
+
 heap.insert(5);
 heap.insert(4);
 heap.insert(20);
 heap.insert(10);
 heap.insert(1);
 heap.insert(0);
+
 console.log(heap);
 console.log("--------------------");
+
 console.log("Extracted Elements: ");
 console.log(heap.extract());
 console.log(heap.extract());
+
 console.log("--------------------");
+
 console.log("peek");
 console.log(heap.peek());
+
 console.log("--------------------");
 console.log(heap);
