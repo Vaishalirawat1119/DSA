@@ -23,7 +23,7 @@ class MaxPriorityQueue{
         const max = this.heap[0];
         const end = this.heap.pop();
         if(this.heap.length > 0){
-            this.heap[0];
+            this.heap[0] = end;
             this.heapifyDown();
         }
         return max;
@@ -36,16 +36,15 @@ class MaxPriorityQueue{
             let left = (2 * index) + 1;
             let right = (2 * index) + 2;
             let largest = index;
-            if(left > length && this.heap[left].priority > this.heap[largest].priority){
+            if(left < length && this.heap[left].priority > this.heap[largest].priority){
                 largest = left;
             }
-            if(right > length && this.heap[right].priority > this.heap[largest].priority){
+            if(right < length && this.heap[right].priority > this.heap[largest].priority){
                 largest = right;
             }
-            if(largest === index){
-                this.swap(index, largest);
-                index = largest;
-            }
+            if(largest === index) break;
+            this.swap(index, largest);
+            index = largest;
         }
     }
 
@@ -76,9 +75,10 @@ pq.enqueue("Injury", 9);
 pq.enqueue("Flu", 5);
 console.log(pq);
 
-// console.log(pq.dequeue());
-console.log(pq);
+console.log("Dequeue: ");
+console.log(pq.dequeue());
 
+console.log("Front: ");
 console.log(pq.front());
 console.log(`size: ${pq.size()}`);
 console.log(`Empty: ${pq.isEmpty()}`);
