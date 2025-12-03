@@ -4,12 +4,9 @@ function maxProduct(arr){
     let totalMax = -Infinity;
     for(let i=0; i<n; i++){
         leftToRight = leftToRight * arr[i];
-        totalMax = Math.max(totalMax, leftToRight);
+        rightToLeft = rightToLeft * arr[n-i-1];
+        totalMax = Math.max(totalMax, leftToRight, rightToLeft);
         if(leftToRight === 0) leftToRight = 1;
-    }
-    for(let i=n-1; i>=0; i--){
-        rightToLeft = rightToLeft * arr[i];
-        totalMax = Math.max(totalMax, rightToLeft);
         if(rightToLeft === 0) rightToLeft = 1;
     }
     return totalMax;
