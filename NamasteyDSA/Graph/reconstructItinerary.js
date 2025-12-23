@@ -14,10 +14,12 @@ function findItinerary(tickets){
             let neighbor = destinations.shift();
             dfs(neighbor);
         }
-        path.push(curr);
+        // path.push(curr);
+        path.unshift(curr);
     }
     dfs("JFK");
-    return path.reverse();
+    // return path.reverse();
+    return path;
 }
 console.log(findItinerary(tickets = [["MUC","LHR"],["JFK","MUC"],["SFO","SJC"],["LHR","SFO"]]));
 console.log(findItinerary(tickets = [["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]));
