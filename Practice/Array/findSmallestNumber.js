@@ -11,12 +11,13 @@
 //Approach 2
 
 function smallest(arr){
+    if(!Array.isArray(arr)) return false;
     if(arr.length === 0) return null;
-    let min = arr[0];
+    let min;
     for(let i=0; i<arr.length; i++){
-        if(min > arr[i]){
-            min = arr[i];
-        }
+        let val = arr[i];
+        if(typeof val !== 'number' || !Number.isFinite(val)) return false;
+        if (min === undefined || val < min) min = val;
     }
     return min;
 }
